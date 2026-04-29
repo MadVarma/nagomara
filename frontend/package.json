@@ -1,0 +1,16 @@
+{
+  "name": "ec-frontend",
+  "version": "1.0.0",
+  "description": "E-commerce Footwear Frontend",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "next": "^16.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.3.1"
+  }
+}
