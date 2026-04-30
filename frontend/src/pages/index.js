@@ -11,6 +11,7 @@ export default function Landing() {
   const router = useRouter();
   const [featured, setFeatured] = useState([]);
   const [added, setAdded] = useState({});
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     axios.get('/api/products').then(res => setFeatured((res.data || []).slice(0, 4))).catch(() => {});
@@ -54,7 +55,22 @@ export default function Landing() {
             {user && <Link href={user.role === 'admin' ? '/admin' : '/shop'} className="nav-cta-btn">Dashboard →</Link>}
             {!user && <Link href="/login" className="nav-cta-btn">Cop Now →</Link>}
           </div>
+          <button
+            className={`hamburger${menuOpen ? ' open' : ''}`}
+            onClick={() => setMenuOpen(v => !v)}
+            aria-label="Toggle menu"
+          >
+            <span /><span /><span />
+          </button>
         </div>
+        {menuOpen && (
+          <div className="mobile-nav-menu">
+            <Link href="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
+            <Link href="/login" onClick={() => setMenuOpen(false)}>Login</Link>
+            {user && <Link href={user.role === 'admin' ? '/admin' : '/shop'} onClick={() => setMenuOpen(false)}>Dashboard</Link>}
+            {!user && <Link href="/login" onClick={() => setMenuOpen(false)}>Cop Now</Link>}
+          </div>
+        )}
       </nav>
 
       {/* ---- HERO ---- */}

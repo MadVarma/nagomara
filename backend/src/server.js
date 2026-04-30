@@ -8,7 +8,14 @@ const productRoutes = require('./routes/product');
 const orderRoutes = require('./routes/order');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3001',
+    'http://localhost:3000',
+    process.env.FRONTEND_URL,
+  ].filter(Boolean),
+  credentials: true,
+}));
 app.use(express.json());
 
 // Serve uploaded images statically
