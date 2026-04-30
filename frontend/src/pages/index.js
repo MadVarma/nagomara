@@ -30,17 +30,17 @@ export default function Landing() {
       <div className="announcement-bar">
         <div className="announcement-track">
           <span>FREE SHIPPING ON ORDERS ABOVE ₹999</span>
-          <span>✦</span>
-          <span>WEEKLY DROPS — DON&apos;T SLEEP</span>
-          <span>✦</span>
-          <span>100% AUTHENTICATED — DEADSTOCK GUARANTEED</span>
-          <span>✦</span>
+          <span>刀</span>
+          <span>WEEKLY DROPS — STRIKE BEFORE THEY VANISH</span>
+          <span>刀</span>
+          <span>100% AUTHENTICATED — WARRIOR STANDARDS ONLY</span>
+          <span>刀</span>
           <span>FREE SHIPPING ON ORDERS ABOVE ₹999</span>
-          <span>✦</span>
-          <span>WEEKLY DROPS — DON&apos;T SLEEP</span>
-          <span>✦</span>
-          <span>100% AUTHENTICATED — DEADSTOCK GUARANTEED</span>
-          <span>✦</span>
+          <span>刀</span>
+          <span>WEEKLY DROPS — STRIKE BEFORE THEY VANISH</span>
+          <span>刀</span>
+          <span>100% AUTHENTICATED — WARRIOR STANDARDS ONLY</span>
+          <span>刀</span>
         </div>
       </div>
 
@@ -62,26 +62,15 @@ export default function Landing() {
         <div className="hero-sakura-glow" />
         <div className="hero-sakura-glow hero-sakura-glow-2" />
         <div className="hero-split">
-          {/* LEFT — IMAGE */}
-          <div className="hero-img-col">
-            <div className="hero-img-wrap">
-              <img
-                src="/af23d99f-8bef-4edb-ba43-8c90be4dcd1e.png"
-                alt="Nagomara Hero"
-                className="hero-img"
-              />
-              <div className="hero-img-fade" />
-            </div>
-          </div>
-          {/* RIGHT — CONTENT */}
           <div className="hero-content">
-            <div className="hero-eyebrow">NAGOMARA 二〇二六 COLLECTION</div>
+            <div className="hero-mon">⚔ 刀 ⚔</div>
+            <div className="hero-eyebrow">NAGOMARA 二〇二六 · 武士の道</div>
             <h1 className="hero-title">
-              LACE UP.<br />
-              <span className="hero-title-accent">STAND OUT.</span>
+              WALK WITH<br />
+              <span className="hero-title-accent">HONOR.</span>
             </h1>
             <p className="hero-subtitle">
-              Street-forged. Sakura-blessed. Every pair dropped here is a piece of culture — not just a shoe.
+              Forged in the spirit of the samurai. Every pair is a statement of discipline, power, and the relentless pursuit of mastery.
             </p>
             <div className="hero-btns">
               <Link href="/shop" className="hero-btn-primary">SHOP THE DROP</Link>
@@ -113,12 +102,12 @@ export default function Landing() {
           <h2 className="section-title">PICK YOUR LANE</h2>
           <div className="categories-grid">
             {[
-              { name: 'Running', emoji: '🏃', desc: 'Track-tested, street-approved', color: '#f5e8ec' },
-              { name: 'Casual', emoji: '👟', desc: 'Low-key drip for every day', color: '#f0e0e8' },
-              { name: 'Basketball', emoji: '🏀', desc: 'Hoop culture on your feet', color: '#ede8df' },
-              { name: 'Limited', emoji: '🔥', desc: 'Exclusive drops. Cop before they&apos;re gone.', color: '#f5e8ec' },
+              { name: 'Running', emoji: '⚔️', desc: 'Precision-engineered for every stride', color: null },
+              { name: 'Casual', emoji: '🀄', desc: 'Understated power. Everyday mastery', color: null },
+              { name: 'Basketball', emoji: '🏯', desc: 'Court-forged. Battle-ready grip', color: null },
+              { name: 'Limited', emoji: '🎌', desc: 'Rare drops. Cop before they vanish.', color: null },
             ].map(cat => (
-              <Link href="/shop" key={cat.name} className="category-card" style={{ background: cat.color }}>
+              <Link href="/shop" key={cat.name} className="category-card">
                 <div className="category-emoji">{cat.emoji}</div>
                 <div className="category-name">{cat.name}</div>
                 <div className="category-desc">{cat.desc}</div>
@@ -177,10 +166,9 @@ export default function Landing() {
       <section className="banner-strip">
         <div className="banner-strip-content">
           <div className="banner-big-text">NAGOMARA</div>
-          <div className="banner-sub">桜 — THE DROP IS CULTURE</div>
+          <div className="banner-sub">刀 — THE WAY OF THE WARRIOR</div>
           <p className="banner-desc">
-            In Japan, sakura blooms fast and fades faster — just like a heat drop. We carry that same urgency.
-            Every pair here is chosen. Authenticated. Worth the cop.
+            In bushido, the samurai lived by a code of honor, discipline, and relentless dedication — just like every pair we carry. Chosen. Authenticated. Worth the cop.
           </p>
           <Link href="/shop" className="hero-btn-primary">EXPLORE THE DROP</Link>
         </div>
@@ -193,10 +181,10 @@ export default function Landing() {
           <h2 className="section-title">THE NAGOMARA CODE</h2>
           <div className="why-grid">
             {[
-              { icon: '✅', title: 'Deadstock Verified', desc: 'Every pair authenticated by our team. No replicas. No compromises.' },
-              { icon: '🚚', title: 'Fast Delivery', desc: 'Cop today, step out in 3–5 days. We move as fast as the culture does.' },
-              { icon: '🔄', title: 'Easy Returns', desc: '7-day hassle-free returns. If it doesn\'t feel right, we fix it.' },
-              { icon: '🌸', title: 'Sakura Promise', desc: 'Like every cherry blossom — rare, intentional, and worth every second.' },
+              { icon: '⚔️', title: 'Battle-Tested Quality', desc: 'Every pair authenticated by our team. No replicas. No compromises. Warrior standards only.' },
+              { icon: '🎌', title: 'Swift Delivery', desc: 'Cop today, step out in 3–5 days. We move with the precision and speed of a samurai.' },
+              { icon: '⛩️', title: 'Honor Code Returns', desc: '7-day hassle-free returns. Our code of honor means we stand behind every pair.' },
+              { icon: '🌸', title: 'Sakura Promise', desc: 'Like the cherry blossom — rare, intentional, and worth every second of the wait.' },
             ].map(item => (
               <div className="why-card" key={item.title}>
                 <div className="why-icon">{item.icon}</div>
@@ -211,9 +199,9 @@ export default function Landing() {
       {/* ---- NEWSLETTER ---- */}
       <section className="newsletter-section">
         <div className="newsletter-inner">
-          <div className="section-label" style={{ color: '#c9a96e' }}>DON&apos;T MISS THE DROP</div>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#1a1a18', margin: '0.3rem 0 0.7rem', fontFamily: "'Shippori Mincho', serif", letterSpacing: '2px' }}>GET DROP ALERTS</h2>
-          <p style={{ color: '#7a7670', marginBottom: '1.5rem' }}>Be first in line when new pairs land. Exclusive access. No bots. Just culture.</p>
+          <div className="section-label" style={{ color: '#c9a96e' }}>HONOR THE DROP</div>
+          <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#f0ead8', margin: '0.3rem 0 0.7rem', fontFamily: "'Shippori Mincho', serif", letterSpacing: '2px' }}>FIRST WARRIOR IN LINE</h2>
+          <p style={{ color: '#8a8478', marginBottom: '1.5rem' }}>Be first when new pairs land. Exclusive access. No bots. Warrior code only.</p>
           <form className="newsletter-form" onSubmit={e => { e.preventDefault(); alert('You\'re in. We\'ll hit you when it drops.'); }}>
             <input type="email" placeholder="your@email.com" required />
             <button type="submit">NOTIFY ME</button>
@@ -226,9 +214,9 @@ export default function Landing() {
         <div className="footer-inner">
           <div className="footer-brand-col">
             <div className="nagomara-brand" style={{ fontSize: '1.8rem', marginBottom: '0.8rem' }}>NAGOMARA</div>
-            <p style={{ color: '#888', fontSize: '0.88rem', lineHeight: 1.7 }}>
-              Born from the streets of Tokyo. Built for those who move with purpose.
-              Cop the culture. Wear the story.
+            <p style={{ color: '#8a8478', fontSize: '0.88rem', lineHeight: 1.7 }}>
+              Born from the ancient spirit of the samurai. Built for those who move with purpose and precision.
+              Cop the culture. Wear the honor.
             </p>
             <div className="footer-socials">
               <span>IG</span><span>TW</span><span>YT</span>
@@ -258,7 +246,7 @@ export default function Landing() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 NAGOMARA. ALL RIGHTS RESERVED.</span>
-          <span>桜 · DROP THE CULTURE · STEP INTO GREATNESS</span>
+          <span>刀 · HONOR THE CRAFT · WALK WITH PURPOSE</span>
         </div>
       </footer>
     </div>
