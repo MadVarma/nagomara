@@ -590,6 +590,12 @@ body {
 }
 
 /* ---- NAVBAR (non-landing pages) ---- */
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0c0b09;
+}
 .navbar {
   background: #0c0b09;
   color: #f0ead8;
@@ -599,9 +605,6 @@ body {
   justify-content: space-between;
   height: 64px;
   box-shadow: 0 1px 0 rgba(155,28,28,0.2);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 .navbar-brand {
   font-size: 1.5rem;

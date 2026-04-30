@@ -19,44 +19,46 @@ export default function Navbar() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <nav className="navbar">
-      <Link href="/" className="navbar-brand">NAGOMARA</Link>
-      <div className="navbar-links">
-        {user ? (
-          <>
-            {user.role === 'admin' ? (
-              <>
-                <Link href="/admin">Dashboard</Link>
-                <span style={{ color: '#888', fontSize: '0.9rem' }}>
-                  {user.name}<span className="admin-badge">ADMIN</span>
-                </span>
-              </>
-            ) : (
-              <>
-                <Link href="/shop">Shop</Link>
-                <Link href="/orders">My Orders</Link>
-                <Link href="/cart" className="cart-btn">
-                  🛒 Cart{cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-                </Link>
-                <span style={{ color: '#888', fontSize: '0.9rem' }}>{user.name}</span>
-              </>
-            )}
-            <button onClick={handleLogout}>Logout</button>
-          </>
-        ) : (
-          <>
-            <Link href="/shop">Shop</Link>
-            <Link href="/login">Login</Link>
-          </>
-        )}
-      </div>
-      <button
-        className={`hamburger${menuOpen ? ' open' : ''}`}
-        onClick={() => setMenuOpen(v => !v)}
-        aria-label="Toggle menu"
-      >
-        <span /><span /><span />
-      </button>
+    <div className="navbar-wrapper">
+      <nav className="navbar">
+        <Link href="/" className="navbar-brand">NAGOMARA</Link>
+        <div className="navbar-links">
+          {user ? (
+            <>
+              {user.role === 'admin' ? (
+                <>
+                  <Link href="/admin">Dashboard</Link>
+                  <span style={{ color: '#888', fontSize: '0.9rem' }}>
+                    {user.name}<span className="admin-badge">ADMIN</span>
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Link href="/shop">Shop</Link>
+                  <Link href="/orders">My Orders</Link>
+                  <Link href="/cart" className="cart-btn">
+                    🛒 Cart{cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+                  </Link>
+                  <span style={{ color: '#888', fontSize: '0.9rem' }}>{user.name}</span>
+                </>
+              )}
+              <button onClick={handleLogout}>Logout</button>
+            </>
+          ) : (
+            <>
+              <Link href="/shop">Shop</Link>
+              <Link href="/login">Login</Link>
+            </>
+          )}
+        </div>
+        <button
+          className={`hamburger${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen(v => !v)}
+          aria-label="Toggle menu"
+        >
+          <span /><span /><span />
+        </button>
+      </nav>
       {menuOpen && (
         <div className="mobile-nav-menu">
           {user ? (
@@ -78,6 +80,13 @@ export default function Navbar() {
             <>
               <Link href="/shop" onClick={closeMenu}>Shop</Link>
               <Link href="/login" onClick={closeMenu}>Login</Link>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
             </>
           )}
         </div>
